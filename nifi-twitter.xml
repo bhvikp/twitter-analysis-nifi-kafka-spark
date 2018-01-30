@@ -1,0 +1,375 @@
+<?xml version="1.0" ?>
+<template encoding-version="1.1">
+  <description></description>
+  <groupId>4581089f-0161-1000-de06-be8105d0b006</groupId>
+  <name>twitter-analysis</name>
+  <snippet>
+    <connections>
+      <id>9bcf03e4-4039-3e2d-0000-000000000000</id>
+      <parentGroupId>44a72f8c-6ac4-30e0-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <bends>
+        <x>775.0</x>
+        <y>285.0</y>
+      </bends>
+      <bends>
+        <x>775.0</x>
+        <y>335.0</y>
+      </bends>
+      <destination>
+        <groupId>44a72f8c-6ac4-30e0-0000-000000000000</groupId>
+        <id>0e417e4a-c515-3750-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>failure</selectedRelationships>
+      <source>
+        <groupId>44a72f8c-6ac4-30e0-0000-000000000000</groupId>
+        <id>0e417e4a-c515-3750-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>ac72ea6d-d5a9-39ed-0000-000000000000</id>
+      <parentGroupId>44a72f8c-6ac4-30e0-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>44a72f8c-6ac4-30e0-0000-000000000000</groupId>
+        <id>0e417e4a-c515-3750-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>44a72f8c-6ac4-30e0-0000-000000000000</groupId>
+        <id>ab843ffc-e916-37bb-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <processors>
+      <id>ab843ffc-e916-37bb-0000-000000000000</id>
+      <parentGroupId>44a72f8c-6ac4-30e0-0000-000000000000</parentGroupId>
+      <position>
+        <x>0.0</x>
+        <y>0.0</y>
+      </position>
+      <bundle>
+        <artifact>nifi-social-media-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.3.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Twitter Endpoint</key>
+            <value>
+              <name>Twitter Endpoint</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Consumer Key</key>
+            <value>
+              <name>Consumer Key</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Consumer Secret</key>
+            <value>
+              <name>Consumer Secret</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Access Token</key>
+            <value>
+              <name>Access Token</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Access Token Secret</key>
+            <value>
+              <name>Access Token Secret</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Languages</key>
+            <value>
+              <name>Languages</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Terms to Filter On</key>
+            <value>
+              <name>Terms to Filter On</name>
+            </value>
+          </entry>
+          <entry>
+            <key>IDs to Follow</key>
+            <value>
+              <name>IDs to Follow</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Locations to Filter On</key>
+            <value>
+              <name>Locations to Filter On</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Twitter Endpoint</key>
+            <value>Filter Endpoint</value>
+          </entry>
+          <entry>
+            <key>Consumer Key</key>
+            <value>KFRqLT8ac2y6if9ONgHqwLzbJw</value>
+          </entry>
+          <entry>
+            <key>Consumer Secret</key>
+          </entry>
+          <entry>
+            <key>Access Token</key>
+            <value>332909137-Mfidnb945nqbP4Do2ifMa2tkiJXrvXyolq2NjRbw</value>
+          </entry>
+          <entry>
+            <key>Access Token Secret</key>
+          </entry>
+          <entry>
+            <key>Languages</key>
+          </entry>
+          <entry>
+            <key>Terms to Filter On</key>
+            <value>cloudera,bigdata,machine learning,kafka,data scientist</value>
+          </entry>
+          <entry>
+            <key>IDs to Follow</key>
+          </entry>
+          <entry>
+            <key>Locations to Filter On</key>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>GetTwitter</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.twitter.GetTwitter</type>
+    </processors>
+    <processors>
+      <id>0e417e4a-c515-3750-0000-000000000000</id>
+      <parentGroupId>44a72f8c-6ac4-30e0-0000-000000000000</parentGroupId>
+      <position>
+        <x>320.0</x>
+        <y>245.0</y>
+      </position>
+      <bundle>
+        <artifact>nifi-kafka-0-10-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.3.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>bootstrap.servers</key>
+            <value>
+              <name>bootstrap.servers</name>
+            </value>
+          </entry>
+          <entry>
+            <key>security.protocol</key>
+            <value>
+              <name>security.protocol</name>
+            </value>
+          </entry>
+          <entry>
+            <key>sasl.kerberos.service.name</key>
+            <value>
+              <name>sasl.kerberos.service.name</name>
+            </value>
+          </entry>
+          <entry>
+            <key>sasl.kerberos.principal</key>
+            <value>
+              <name>sasl.kerberos.principal</name>
+            </value>
+          </entry>
+          <entry>
+            <key>sasl.kerberos.keytab</key>
+            <value>
+              <name>sasl.kerberos.keytab</name>
+            </value>
+          </entry>
+          <entry>
+            <key>ssl.context.service</key>
+            <value>
+              <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+              <name>ssl.context.service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>topic</key>
+            <value>
+              <name>topic</name>
+            </value>
+          </entry>
+          <entry>
+            <key>acks</key>
+            <value>
+              <name>acks</name>
+            </value>
+          </entry>
+          <entry>
+            <key>kafka-key</key>
+            <value>
+              <name>kafka-key</name>
+            </value>
+          </entry>
+          <entry>
+            <key>key-attribute-encoding</key>
+            <value>
+              <name>key-attribute-encoding</name>
+            </value>
+          </entry>
+          <entry>
+            <key>message-demarcator</key>
+            <value>
+              <name>message-demarcator</name>
+            </value>
+          </entry>
+          <entry>
+            <key>max.request.size</key>
+            <value>
+              <name>max.request.size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>ack.wait.time</key>
+            <value>
+              <name>ack.wait.time</name>
+            </value>
+          </entry>
+          <entry>
+            <key>max.block.ms</key>
+            <value>
+              <name>max.block.ms</name>
+            </value>
+          </entry>
+          <entry>
+            <key>partitioner.class</key>
+            <value>
+              <name>partitioner.class</name>
+            </value>
+          </entry>
+          <entry>
+            <key>compression.type</key>
+            <value>
+              <name>compression.type</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>bootstrap.servers</key>
+            <value>localhost:9092</value>
+          </entry>
+          <entry>
+            <key>security.protocol</key>
+            <value>PLAINTEXT</value>
+          </entry>
+          <entry>
+            <key>sasl.kerberos.service.name</key>
+          </entry>
+          <entry>
+            <key>sasl.kerberos.principal</key>
+          </entry>
+          <entry>
+            <key>sasl.kerberos.keytab</key>
+          </entry>
+          <entry>
+            <key>ssl.context.service</key>
+          </entry>
+          <entry>
+            <key>topic</key>
+            <value>twitter</value>
+          </entry>
+          <entry>
+            <key>acks</key>
+            <value>0</value>
+          </entry>
+          <entry>
+            <key>kafka-key</key>
+          </entry>
+          <entry>
+            <key>key-attribute-encoding</key>
+            <value>utf-8</value>
+          </entry>
+          <entry>
+            <key>message-demarcator</key>
+          </entry>
+          <entry>
+            <key>max.request.size</key>
+            <value>1 MB</value>
+          </entry>
+          <entry>
+            <key>ack.wait.time</key>
+            <value>5 secs</value>
+          </entry>
+          <entry>
+            <key>max.block.ms</key>
+            <value>5 sec</value>
+          </entry>
+          <entry>
+            <key>partitioner.class</key>
+            <value>org.apache.kafka.clients.producer.internals.DefaultPartitioner</value>
+          </entry>
+          <entry>
+            <key>compression.type</key>
+            <value>none</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>PublishKafka_0_10</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.kafka.pubsub.PublishKafka_0_10</type>
+    </processors>
+  </snippet>
+  <timestamp>01/30/2018 11:24:59 IST</timestamp>
+</template>
